@@ -247,7 +247,7 @@
         </header>
         <div class="row">
           <div class="col-lg-8 mx-auto">
-           <!--<form id="contact-form">-->
+           <form id="contact-form">
               <div class="messages"></div>
               <div class="controls">
                 <div class="row">
@@ -267,11 +267,11 @@
                     <textarea id="message" placeholder="Message for me *" rows="4" required="required" class="form-control"></textarea>
                   </div>
                   <div class="col-md-12 text-center">
-                    <button type="submit" onclick="formal()" class="btn btn-outline-primary">Send message</button>
+                    <button type="submit" onclick="" class="btn btn-outline-primary">Send message</button>
                   </div>
                 </div>
               </div>
-            <!--</form>-->
+            </form>
           </div>
         </div>
       </div>
@@ -304,27 +304,6 @@
     <script src="vendor/jquery.counterup/jquery.counterup.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.js"> </script>
     <script src="js/front.js"></script>
-	<script >
-	function formal() {
-		  var name = document.getElementById("name").value;
-		  var surname = document.getElementById("surname").value;
-		  var email = document.getElementById("email").value;
-		  var phone = document.getElementById("phone").value;
-		  var message = document.getElementById("message").value;
-		  
-		  var xhttp = new XMLHttpRequest();
-		  xhttp.onreadystatechange = function() {
-			if (this.readyState == 4 && this.status == 200) {
-			  document.getElementById("demo").innerHTML = this.responseText;
-			}
-		  };
-		  xhttp.open("POST", "https://eambele.000webhostapp.com/requesthandle.php", true);
-		  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-		  xhttp.send("email="+email+"&name="+name+"&surname="+surname+"&phone="+phone+"&message="+message);
-		  alert('Your information has been sent');
-		// xhttp.send("email=email&name=name&surname=surname&phone=phone&message=message");
-		  
-		  
-		}</script>
+
   </body>
 </html>
